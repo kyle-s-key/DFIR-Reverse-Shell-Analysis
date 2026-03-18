@@ -45,6 +45,9 @@ Analysis of the provided disk image revealed a highly targeted attack rather tha
 ![LnkParse3 output](screenshots/lnkparse3.output.png)
 
 * **05:54:17 PM**: PowerShell logs confirm the script altered the execution policy, disabled real-time monitoring, downloaded a secondary script also named `update.ps1` from `10.0.0.55`, registered a scheduled task, and forced a system reboot.
+
+![Event 4104: First update.ps1 script ran](screenshots/first.update.ps1.png)
+
 * **05:54:18 PM**: The server initiated a forced logoff and shutdown.
 * **06:01:16 PM**: The system finished rebooting and processes resumed.
 * **06:01:54 PM**: The scheduled task triggered upon initialization, silently executing the secondary `update.ps1` from the Administrator's `AppData\Roaming` folder.
@@ -52,6 +55,8 @@ Analysis of the provided disk image revealed a highly targeted attack rather tha
 ![Event 600: Malicious PowerShell script running](screenshots/powershell.script.png)
 
 * **Post-Execution**: The script initiated a 15-second sleep cycle before establishing a TCP client connection to `10.0.0.55` on port `443`, granting the attacker a live reverse shell.
+
+![Secondary update.ps1 script](screenshots/second.update.ps1.png)
 
 --- 
 
