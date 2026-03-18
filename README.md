@@ -6,7 +6,7 @@
 This project demonstrates investigating an Extended Detection and Response (XDR) alert flagged on a Windows Server 2022 system (IP: `10.0.0.2`), simulating an incident for a Security Operations Center (SOC). The alert indicated the download and execution of a suspicious file (`update.ps1`) and subsequent unauthorized network traffic over port `443`. My objective was to analyze a provided disk image, reconstruct the attack timeline, identify the infection vector, and provide actionable remediation steps.
 
 ### Tools Used:
-* **Exterro FTK Imager (v4.3)**: For mounting and analyzing the disk image and extracting evidence.
+* **AccessData FTK Imager (v4.3)**: For mounting and analyzing the disk image and extracting evidence.
 * **Windows Event Viewer**: For correlating system, security, and PowerShell operational logs.
 * **LnkParse3**: For parsing shortcut files to trace the origin of the malicious payload.
 
