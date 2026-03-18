@@ -62,13 +62,19 @@ To eradicate the threat and secure the environment, I recommended the following 
 ### Containment & Eradication
 
 **1. Network Isolation**: Immediately disconnect the compromised server and the internal device at `10.0.0.55` from the local network.
+
 **2. Firewall Blocking**: Block all traffic to and from `10.0.0.55` at the firewall level to prevent further lateral movement.
+
 **3. Account Suspension**: Disable the compromised Administrator account and force password resets for any associated accounts.
+
 **4. System Wipe**: After capturing forensic images, completely wipe both the server and the `10.0.0.55` system, as malware scans are insufficient when an attacker has held administrative access.
 
 ### Recovery & Prevention
 
 **1. System Restoration**: Rebuild the affected systems using known good backups and heavily monitor their outbound traffic upon restoration.
+
 **2. Access Controls**: Restrict physical access to the server room and disable unauthorized USB pass-through on the hypervisor.
+
 **3. Authentication Upgrades**: Enforce Multi-Factor Authentication (MFA) for all administrative accounts and ensure the Principle of Least Privilege is strictly followed.
+
 **4. Detection Engineering**: Create new XDR detection rules focused specifically on the PowerShell execution behaviors observed in this incident.
