@@ -46,6 +46,7 @@ Analysis of the provided disk image revealed a highly targeted attack rather tha
 
 * **05:54:17 PM**: PowerShell logs confirm the script altered the execution policy, disabled real-time monitoring, downloaded a secondary script also named `update.ps1` from `10.0.0.55`, registered a scheduled task, and forced a system reboot.
 
+![First update.ps1 script](screenshots/initial.update.ps1.png)
 ![Event 4104: First update.ps1 script ran](screenshots/first.update.ps1.png)
 
 * **05:54:18 PM**: The server initiated a forced logoff and shutdown.
